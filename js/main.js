@@ -1,26 +1,23 @@
+$('img').each(function(){
+			var W = $('.galimg').width();
+			$(this).height(W);
+		
+});
 
-	
 
+$('.galimg').children(function(e)	{	
 
-	$('.galimg').each(function(){
-		var width = $(this).children('img').width(),
-			height = $(this).children('img').height(),
-			width = height;
+		if (this.width > this.height) {
 			
-			
-
-			
-
-		if (width < height) {
-			$(this).addClass('portrait');
+			$(this).addClass('landscape');
 
 
 		} 
 
 		else   {
-			$(this).addClass('landscape') ;
+			$(this).addClass('portrait') ;
 		}
 
-
 });
+		
 
